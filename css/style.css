@@ -1,5 +1,120 @@
-body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 20px; }
-h1 { color: #0056b3; }
-nav ul { list-style: none; padding: 0; }
-nav ul li { display: inline; margin-right: 15px; }
-a { color: #0056b3; text-decoration: none; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    color: #3e2723;
+    background-color: #f5f0e6;
+    background-image: url('../banner.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.portfolio {
+    max-width: 800px;
+    width: 100%;
+    background-color: rgba(253, 250, 245, 0.95);
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(62, 39, 35, 0.3);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.header-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.header-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #5d4037;
+    margin-bottom: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header-text h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    color: #8d6e63;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.info p {
+    font-size: 17px;
+    color: #6d4c41;
+    margin-bottom: 5px;
+}
+
+.header-photo img {
+    width: 220px;
+    display: block;
+    box-shadow: 0 4px 15px rgba(62, 39, 35, 0.15);
+}
+
+.skills {
+    margin-top: 30px;
+}
+
+.skills h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #5d4037;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.skills ul {
+    list-style-type: none;
+}
+
+.skills li {
+    font-family: 'Jost', sans-serif;
+    margin-bottom: 12px;
+    color: #4a3b32;
+    font-size: 17px;
+    padding-left: 25px;
+    position: relative;
+    letter-spacing: 0.3px;
+}
+
+.skills li::before {
+    content: "✦"; 
+    color: #a1887f;
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    top: 1px;
+}
+
+.footer {
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #a1887f;
+    font-family: 'Jost', sans-serif;
+}
+
+.footer a {
+    color: #8d6e63;
+    text-decoration: none;
+}
