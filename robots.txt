@@ -3,4 +3,4 @@ Disallow: /css/
 Disallow: /js/
 Disallow: /images/
 Allow: /
-Sitemap: https://wisteriawr/my-lab-site/sitemap.xml
+Sitemap: https://wisteriawr/LR8/sitemap.xml
