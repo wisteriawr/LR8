@@ -1,3 +1,6 @@
+/* Подключаем красивые шрифты из Google Fonts (не библиотека, просто шрифты) */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +9,10 @@
 
 body {
     font-family: 'Jost', sans-serif;
-    color: #3e2723;
-    background-color: #f5f0e6;
-    background-image: url('../images/banner.jpg');
-    background-size: cover;
-    background-position: center top;
+    color: #4a3b4c;
+    /* Нежный градиент: светло-фиолетовый и розовый */
+    background: linear-gradient(135deg, #f3e7f9 0%, #fde2e4 100%);
     background-attachment: fixed;
-    background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -20,185 +20,246 @@ body {
     padding: 20px;
 }
 
-/* Общий контейнер для всех страниц (заменил .portfolio на .card) */
+/* Главная карточка (эффект стекла) */
 .card {
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
-    background-color: rgba(253, 250, 245, 0.95);
-    padding: 40px;
-    box-shadow: 0 15px 40px rgba(62, 39, 35, 0.3);
-}
-
-/* Стили для шапки (портфолио) */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.header-text {
-    flex: 1;
-    padding-right: 40px;
-}
-
-.header-text h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    color: #5d4037;
-    margin-bottom: 5px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.header-text h2 {
-    font-family: 'Jost', sans-serif;
-    font-size: 20px;
-    color: #8d6e63;
-    font-weight: 500;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-}
-
-.info p {
-    font-size: 17px;
-    color: #6d4c41;
-    margin-bottom: 5px;
-}
-
-.header-photo img {
-    width: 220px;
-    display: block;
-    box-shadow: 0 4px 15px rgba(62, 39, 35, 0.15);
-}
-
-/* Стили для навыков */
-.skills {
-    margin-top: 30px;
-}
-
-.skills h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    color: #5d4037;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.skills ul {
-    list-style-type: none;
-}
-
-.skills li {
-    font-family: 'Jost', sans-serif;
-    margin-bottom: 12px;
-    color: #4a3b32;
-    font-size: 17px;
-    padding-left: 25px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(15px); /* Эффект размытия фона */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 20px 50px rgba(150, 100, 150, 0.15);
     position: relative;
-    letter-spacing: 0.3px;
+    overflow: hidden;
 }
 
-.skills li::before {
-    content: "✦"; 
-    color: #a1887f;
-    position: absolute;
-    left: 0;
-    font-size: 16px;
-    top: 1px;
-}
-
-/* Новые стили для обычных заголовков и текста (для Главной, О себе, Контактов) */
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: #5d4037;
-    margin-bottom: 15px;
-}
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    color: #5d4037;
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-h3 {
-    font-family: 'Jost', sans-serif;
-    font-size: 20px;
-    color: #8d6e63;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-p {
-    font-size: 17px;
-    color: #4a3b32;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.subtitle {
-    font-size: 18px;
-    color: #8d6e63;
-    margin-bottom: 20px;
-}
-
-/* Стили для меню навигации */
+/* Верхнее меню (навигация) */
 nav {
-    margin-top: 30px;
-    border-top: 1px solid #d7ccc8;
-    padding-top: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(150, 100, 150, 0.2);
+    padding-bottom: 20px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
 nav ul li a {
-    color: #5d4037;
+    color: #7b5a7d;
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    transition: color 0.3s;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 nav ul li a:hover {
-    color: #a1887f;
-    text-decoration: underline;
+    color: #d17a8f;
 }
 
-/* Стили для кнопки */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #d17a8f;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Заголовки */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    color: #5c3e5f;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #5c3e5f;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    color: #9b779e;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 17px;
+    color: #6a5a6b;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #9b779e;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Блок с музыкальным плеером (как на референсе) */
+.music-player {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    box-shadow: 0 10px 25px rgba(150, 100, 150, 0.1);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.player-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f3e7f9;
+}
+
+.player-info .song-title {
+    font-weight: 500;
+    font-size: 16px;
+    color: #4a3b4c;
+    margin: 0;
+}
+
+.player-info .song-artist {
+    font-size: 13px;
+    color: #9b779e;
+    margin: 0;
+}
+
+/* Кнопка Play */
+.play-btn {
+    background: #f3e7f9;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: #d17a8f;
+    font-size: 20px;
+}
+
+.play-btn:hover {
+    background: #d17a8f;
+    color: white;
+    transform: scale(1.1);
+}
+
+.play-btn.playing {
+    background: #d17a8f;
+    color: white;
+}
+
+/* Фото профиля в портфолио */
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.profile-photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(150, 100, 150, 0.2);
+}
+
+/* Стили для навыков (как на референсе) */
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills li {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #6a5a6b;
+    border: 1px solid rgba(209, 122, 143, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skills li:hover {
+    background: #d17a8f;
+    color: white;
+    border-color: #d17a8f;
+    transform: translateY(-3px);
+}
+
+/* Кнопка */
 .btn {
     display: inline-block;
-    background-color: #8d6e63;
-    color: #fff;
-    padding: 10px 20px;
+    background: #d17a8f;
+    color: white;
+    padding: 12px 30px;
     text-decoration: none;
-    border-radius: 4px;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    border-radius: 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(209, 122, 143, 0.3);
+    text-align: center;
 }
 
 .btn:hover {
-    background-color: #5d4037;
+    background: #b86076;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(209, 122, 143, 0.4);
 }
 
-/* Стили для футера */
+.btn-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Футер */
 .footer {
     margin-top: 40px;
-    padding-top: 15px;
+    padding-top: 20px;
     text-align: center;
     font-size: 13px;
-    color: #a1887f;
-    font-family: 'Jost', sans-serif;
-}
-
-.footer a {
-    color: #8d6e63;
-    text-decoration: none;
+    color: #9b779e;
+    border-top: 1px solid rgba(150, 100, 150, 0.2);
 }
