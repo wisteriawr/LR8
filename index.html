@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="card">
-        <!-- Меню -->
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
@@ -21,20 +20,39 @@
         <h1>Добро пожаловать</h1>
         <p class="subtitle">Меня зовут Лина. Я создаю уютные и современные сайты.</p>
 
-        <!-- Блок музыкального плеера -->
-        <div class="music-player">
-            <div class="player-info">
-                <!-- Можно поставить любую картинку из папки images -->
-                <img src="images/photo.jpg" alt="Обложка трека">
-                <div>
+        <!-- НОВЫЙ МУЗЫКАЛЬНЫЙ ПЛЕЕР -->
+        <div class="music-player-full">
+            <div class="player-top">
+                <img src="images/photo.jpg" alt="Обложка трека" class="player-cover">
+                <div class="player-text">
                     <p class="song-title">Aesthetic Vibes</p>
                     <p class="song-artist">Lina's Playlist</p>
                 </div>
+                <div class="equalizer">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
-            <button class="play-btn" id="play-music">▶</button>
+            
+            <div class="player-progress">
+                <span class="time">1:23</span>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="time">-3:38</span>
+            </div>
+
+            <div class="player-controls">
+                <button class="control-btn">⏮</button>
+                <button class="control-btn play-btn" id="play-music">⏸</button>
+                <button class="control-btn">⏭</button>
+                <button class="control-btn airplay">📡</button>
+            </div>
         </div>
 
-        <p>Этот сайт создан в рамках лабораторной работы по веб-разработке. Здесь я собрала свои лучшие работы и рассказала о своих навыках.</p>
+        <div class="content-block">
+            <h2>О проекте</h2>
+            <p>Этот сайт создан в рамках лабораторной работы по веб-разработке. Здесь я собрала свои лучшие работы и рассказала о своих навыках. Мне нравится создавать уютные интерфейсы, которые радуют глаз.</p>
+        </div>
         
         <div class="btn-container">
             <a href="portfolio.html" class="btn">Смотреть портфолио</a>
