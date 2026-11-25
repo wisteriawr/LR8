@@ -5,30 +5,9 @@
     <title>Портфолио | Рахманина Лина - веб-разработка и SEO</title>
     <meta name="description" content="Портфолио Рахманиной Лины: навыки HTML, CSS, Git, настройка хостинга и SEO-оптимизация. Мои учебные проекты.">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="card">
-        <h1>Рахманина Лина</h1>
-        <p class="subtitle">ИТКР-225 | 18 лет, г. Москва | Веб-технологии</p>
-        
-        <!-- Ваша картинка из ЛР7 -->
-        <img src="images/photo.jpg" alt="Фотография Рахманиной Лины" class="profile-pic">
-        
-        <h2>Навыки</h2>
-        <ul>
-            <li>HTML5 & CSS3</li>
-            <li>Основы DNS и настройка хостинга</li>
-            <li>Git и GitHub</li>
-            <li>Работа с командной строкой</li>
-        </ul>
-
-        <h2>Мои проекты</h2>
-        <h3>Лабораторная работа №7</h3>
-        <p>Публикация сайта на GitHub Pages и настройка домена.</p>
-        <h3>Лабораторная работа №8</h3>
-        <p>Создание SEO-оптимизированного сайта и настройка robots.txt.</p>
-
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
@@ -37,6 +16,34 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
+
+        <h1>Рахманина Лина</h1>
+        <p class="subtitle">ИТКР-225 | 18 лет, г. Москва | Веб-технологии</p>
+        
+        <div class="profile-photo">
+            <img src="images/photo.jpg" alt="Фотография Рахманиной Лины">
+        </div>
+        
+        <div class="skills">
+            <h2>Навыки</h2>
+            <ul>
+                <li>HTML5 & CSS3</li>
+                <li>Основы DNS и настройка хостинга</li>
+                <li>Git и GitHub</li>
+                <li>Работа с командной строкой</li>
+            </ul>
+        </div>
+
+        <h2>Мои проекты</h2>
+        <h3>Лабораторная работа №7</h3>
+        <p>Публикация сайта на GitHub Pages и настройка домена.</p>
+        <h3>Лабораторная работа №8</h3>
+        <p>Создание SEO-оптимизированного сайта и настройка robots.txt.</p>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> Рахманина Л.В. Все права защищены.</p>
+        </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
