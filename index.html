@@ -2,18 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная | Учебный проект Рахманиной Лины по веб-разработке</title>
-    <meta name="description" content="Добро пожаловать на мой учебный сайт. Здесь вы найдете мое портфолио, информацию обо мне и контакты для связи.">
+    <title>Главная | Личный сайт Рахманиной Лины</title>
+    <meta name="description" content="Добро пожаловать на мой авторский сайт. Здесь вы найдете мое портфолио, навыки веб-разработчика и контактную информацию.">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="card">
-        <h1>Добро пожаловать!</h1>
-        <p class="subtitle">Меня зовут Рахманина Лина. Я студентка группы ИТКР-225.</p>
-        <p>Этот сайт создан в рамках лабораторной работы по веб-технологиям Здесь вы можете узнать больше обо мне и посмотреть мои учебные проекты.</p>
-        
-        <h2>Навигация по сайту</h2>
+        <!-- Меню -->
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
@@ -23,7 +18,33 @@
             </ul>
         </nav>
 
-        <p><a href="portfolio.html" class="btn">Перейти в портфолио</a></p>
+        <h1>Добро пожаловать</h1>
+        <p class="subtitle">Меня зовут Лина. Я создаю уютные и современные сайты.</p>
+
+        <!-- Блок музыкального плеера -->
+        <div class="music-player">
+            <div class="player-info">
+                <!-- Можно поставить любую картинку из папки images -->
+                <img src="images/photo.jpg" alt="Обложка трека">
+                <div>
+                    <p class="song-title">Aesthetic Vibes</p>
+                    <p class="song-artist">Lina's Playlist</p>
+                </div>
+            </div>
+            <button class="play-btn" id="play-music">▶</button>
+        </div>
+
+        <p>Этот сайт создан в рамках лабораторной работы по веб-разработке. Здесь я собрала свои лучшие работы и рассказала о своих навыках.</p>
+        
+        <div class="btn-container">
+            <a href="portfolio.html" class="btn">Смотреть портфолио</a>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> Рахманина Л.В. Все права защищены.</p>
+        </footer>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
