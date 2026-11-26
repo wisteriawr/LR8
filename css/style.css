@@ -16,29 +16,29 @@ body {
     position: relative;
     overflow-x: hidden;
     
-    /* ФОН: Бледные полоски (в стиле вашего скриншота) */
-    background-color: #FCF9F9; /* Очень светлый базовый фон */
+    /* ФОН */
+    background-color: #FCF9F9;
     background-image: repeating-linear-gradient(
         90deg,
-        rgba(199, 113, 132, 0.1) 0px,     /* Бледно-розовая полоса */
+        rgba(199, 113, 132, 0.1) 0px,
         rgba(199, 113, 132, 0.1) 30px,
         transparent 30px,
-        transparent 60px                  /* Прозрачный промежуток */
+        transparent 60px 
     );
 }
 
-/* ЗВЕЗДОЧКИ: Рисуем их через CSS-псевдоэлементы */
+/* ЗВЕЗДОЧКИ */
 body::before,
 body::after {
     content: '';
     position: fixed;
     width: 200px;
     height: 200px;
-    /* Рисуем звезду с помощью клип-паса (маски) */
+
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    background-color: rgba(162, 59, 86, 0.15); /* Полупрозрачный винно-розовый цвет */
-    z-index: -1; /* Отправляем на задний план */
-    pointer-events: none; /* Чтобы не мешали кликать по ссылкам */
+    background-color: rgba(162, 59, 86, 0.15);
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* Левая верхняя звезда */
@@ -57,23 +57,23 @@ body::after {
     transform: rotate(20deg);
     width: 250px;
     height: 250px;
-    background-color: rgba(199, 113, 132, 0.1); /* Чуть светлее */
+    background-color: rgba(199, 113, 132, 0.1);
 }
 
-/* Добавим еще пару звезд через фон карточки (для симметрии) */
+/* Звёздочки фона */
 .card {
     max-width: 1000px;
     width: 100%;
-    padding: 40px; /* Увеличили внутренний отступ, чтобы текст не прилипал к краям */
-    background-color: #FAF8F5; /* Светлая подложка для читаемости */
-    border: 1px solid #E8DFD8; /* Тонкая рамка */
+    padding: 40px;
+    background-color: #FAF8F5;
+    border: 1px solid #E8DFD8;
     border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(90, 50, 70, 0.08); /* Легкая тень */
+    box-shadow: 0 10px 30px rgba(90, 50, 70, 0.08);
     position: relative;
-    z-index: 1; /* Карточка выше фоновых звезд */
+    z-index: 1;
 }
 
-/* Добавляем маленькую звездочку в углу карточки (декор) */
+/* Декор звёздочка */
 .card::before {
     content: '✦';
     position: absolute;
@@ -150,7 +150,7 @@ p {
     margin-bottom: 15px;
 }
 
-/* Главная (Hero) */
+/* Главная */
 .hero-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -192,7 +192,7 @@ p {
     opacity: 0.5;
 }
 
-/* Кнопка (Контурная) */
+/* Кнопка */
 .btn-outline {
     display: inline-block;
     padding: 10px 20px;
@@ -317,41 +317,40 @@ p {
 /* Страница "О себе" */
 .about-wrapper {
     margin-top: 20px;
-    /* Очистка, чтобы следующие блоки не наезжали на фото */
     overflow: hidden; 
 }
 
 .about-image-float {
-    float: left; /* Обтекание слева (текст справа) */
-    width: 40%; /* Ширина фото (можно изменить на 35% или 45%) */
-    margin-right: 30px; /* Отступ от фото до текста */
-    margin-bottom: 20px; /* Отступ снизу */
+    float: left;
+    width: 40%;
+    margin-right: 30px;
+    margin-bottom: 20px;
     
-    /* Красивая тень для фото */
     box-shadow: 10px 10px 0px #E8DFD8; 
 }
 
 .about-image-float img {
     width: 100%;
-    height: auto; /* Квадратное фото само подстроится */
+    height: auto;
     border-radius: 4px;
     display: block;
 }
 
 .clear {
-    clear: both; /* Запрещает тексту обтекать фото дальше */
+    clear: both;
 }
+
 /* Контакты */
 .contacts-open {
-    margin-top: 40px; /* Увеличили отступ сверху, чтобы отодвинуть от заголовка */
+    margin-top: 40px;
 }
 
 .contact-row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Выравниваем по верхнему краю, чтобы ссылка не съезжала */
-    padding: 25px 0; /* Увеличили отступы, чтобы строки "дышали" */
-    border-bottom: 1px dashed #D6C8C0; /* Сделали линию пунктирной для легкости */
+    align-items: flex-start;
+    padding: 25px 0;
+    border-bottom: 1px #D6C8C0;
 }
 
 .contact-row:last-child {
@@ -360,14 +359,14 @@ p {
 
 .contact-info {
     display: flex;
-    flex-direction: column; /* Выстраиваем название и описание друг под другом */
-    gap: 8px; /* Расстояние между названием и описанием */
-    max-width: 60%; /* Ограничиваем ширину, чтобы текст не растягивался на всю строку */
+    flex-direction: column;
+    gap: 8px;
+    max-width: 60%;
 }
 
 .contact-platform {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 26px; /* Чуть увеличили */
+    font-size: 25px;
     font-weight: 600;
     color: #2D1F25;
     line-height: 1;
@@ -386,7 +385,7 @@ p {
     font-size: 16px;
     font-weight: 500;
     transition: color 0.3s;
-    border-bottom: 1px solid #5A3246; /* Сделали ссылку заметнее */
+    border-bottom: 1px solid #5A3246;
     padding-bottom: 2px;
 }
 
@@ -403,35 +402,4 @@ p {
     font-size: 12px;
     color: #A6959B;
     border-top: 1px solid #EBE3DE;
-}
-
-/* Адаптивность */
-@media (max-width: 900px) {
-    .works-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-section, .about-grid {
-        grid-template-columns: 1fr;
-    }
-    h1 {
-        font-size: 38px;
-    }
-    .stats-divider {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-    .stat-open {
-        width: 45%;
-    }
-    nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .works-grid {
-        grid-template-columns: 1fr;
-    }
 }
