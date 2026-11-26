@@ -8,25 +8,80 @@
 
 body {
     font-family: 'Jost', sans-serif;
-    background-color: #FAF8F5;
-    background-image: repeating-linear-gradient(
-        90deg,
-        rgba(90, 50, 70, 0.04) 0px,
-        rgba(90, 50, 70, 0.04) 2px,
-        transparent 2px,
-        transparent 60px
-    );
     color: #3A2C33;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+    
+    /* ФОН: Бледные полоски (в стиле вашего скриншота) */
+    background-color: #FCF9F9; /* Очень светлый базовый фон */
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(199, 113, 132, 0.1) 0px,     /* Бледно-розовая полоса */
+        rgba(199, 113, 132, 0.1) 30px,
+        transparent 30px,
+        transparent 60px                  /* Прозрачный промежуток */
+    );
 }
 
+/* ЗВЕЗДОЧКИ: Рисуем их через CSS-псевдоэлементы */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    /* Рисуем звезду с помощью клип-паса (маски) */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: rgba(162, 59, 86, 0.15); /* Полупрозрачный винно-розовый цвет */
+    z-index: -1; /* Отправляем на задний план */
+    pointer-events: none; /* Чтобы не мешали кликать по ссылкам */
+}
+
+/* Левая верхняя звезда */
+body::before {
+    top: 10%;
+    left: 5%;
+    transform: rotate(-15deg);
+    width: 150px;
+    height: 150px;
+}
+
+/* Правая нижняя звезда */
+body::after {
+    bottom: 10%;
+    right: 5%;
+    transform: rotate(20deg);
+    width: 250px;
+    height: 250px;
+    background-color: rgba(199, 113, 132, 0.1); /* Чуть светлее */
+}
+
+/* Добавим еще пару звезд через фон карточки (для симметрии) */
 .card {
     max-width: 1000px;
     width: 100%;
-    padding: 0;
+    padding: 40px; /* Увеличили внутренний отступ, чтобы текст не прилипал к краям */
+    background-color: #FAF8F5; /* Светлая подложка для читаемости */
+    border: 1px solid #E8DFD8; /* Тонкая рамка */
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(90, 50, 70, 0.08); /* Легкая тень */
+    position: relative;
+    z-index: 1; /* Карточка выше фоновых звезд */
+}
+
+/* Добавляем маленькую звездочку в углу карточки (декор) */
+.card::before {
+    content: '✦';
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    color: #D6C8C0;
+    opacity: 0.7;
 }
 
 /* Меню */
@@ -104,15 +159,14 @@ p {
     margin-bottom: 20px;
 }
 
-/* ОГРАНИЧЕНИЕ РАЗМЕРА ФОТО НА ГЛАВНОЙ */
 .hero-image img {
     width: 100%;
-    max-width: 400px; /* Ограничиваем ширину */
+    max-width: 400px;
     height: auto;
     border-radius: 4px;
     box-shadow: 8px 8px 0px #E8DFD8;
     display: block;
-    margin: 0 auto; /* Центрируем, если есть свободное место */
+    margin: 0 auto;
 }
 
 /* Книжная цитата */
@@ -174,10 +228,9 @@ p {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #D6C8C0;
-    /* Убираем нижнюю границу у статистики, чтобы не было двойной линии с футером */
     padding: 15px 0;
     margin-top: 20px;
-    margin-bottom: 20px; /* Добавляем отступ до футера */
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -200,10 +253,10 @@ p {
     color: #8E7A7F;
 }
 
-/* Сетка работ (Портфолио) 3 В РЯД */
+/* Сетка работ (Портфолио) */
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ровно 3 колонки */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 20px;
 }
@@ -270,10 +323,9 @@ p {
     align-items: start;
 }
 
-/* ОГРАНИЧЕНИЕ РАЗМЕРА ФОТО НА СТРАНИЦЕ "О СЕБЕ" */
 .about-image img {
     width: 100%;
-    max-width: 400px; /* Ограничиваем ширину */
+    max-width: 400px;
     height: auto;
     border-radius: 4px;
     box-shadow: 10px 10px 0px #E8DFD8;
@@ -329,10 +381,10 @@ p {
     border-top: 1px solid #EBE3DE;
 }
 
-/* Адаптивность (для средних и маленьких экранов) */
+/* Адаптивность */
 @media (max-width: 900px) {
     .works-grid {
-        grid-template-columns: repeat(2, 1fr); /* На планшетах 2 колонки */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -356,6 +408,6 @@ p {
         justify-content: center;
     }
     .works-grid {
-        grid-template-columns: 1fr; /* На телефонах 1 колонка */
+        grid-template-columns: 1fr;
     }
 }
