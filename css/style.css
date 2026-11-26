@@ -8,13 +8,14 @@
 
 body {
     font-family: 'Jost', sans-serif;
+    /* Возвращаем благородный полосатый фон, но делаем его мягким */
     background-color: #FAF8F5;
     background-image: repeating-linear-gradient(
         90deg,
-        rgba(90, 50, 70, 0.02) 0px,
-        rgba(90, 50, 70, 0.02) 1px,
-        transparent 1px,
-        transparent 100px
+        rgba(90, 50, 70, 0.04) 0px,      /* Еле заметный оттенок глицинии */
+        rgba(90, 50, 70, 0.04) 2px,
+        transparent 2px,
+        transparent 60px                 /* Ширина полосок */
     );
     color: #3A2C33;
     min-height: 100vh;
@@ -214,12 +215,14 @@ p {
     aspect-ratio: 2 / 3;
     object-fit: cover;
     border-radius: 2px;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    /* Сделал тень более выраженной, чтобы карточки "выделялись" на фоне */
+    box-shadow: 0 8px 20px rgba(90, 50, 70, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work-card:hover img {
-    transform: scale(1.02);
+    transform: translateY(-5px); /* Легкий подскок при наведении */
+    box-shadow: 0 15px 30px rgba(90, 50, 70, 0.15);
 }
 
 .work-info {
@@ -284,6 +287,11 @@ p {
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid #EBE3DE;
+}
+
+/* УБИРАЕМ ЛИШНЮЮ ЛИНИЮ: если это последняя строка, убираем у нее нижнюю границу */
+.contact-row:last-child {
+    border-bottom: none;
 }
 
 .contact-platform {
