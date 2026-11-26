@@ -8,14 +8,13 @@
 
 body {
     font-family: 'Jost', sans-serif;
-    /* Возвращаем благородный полосатый фон, но делаем его мягким */
     background-color: #FAF8F5;
     background-image: repeating-linear-gradient(
         90deg,
-        rgba(90, 50, 70, 0.04) 0px,      /* Еле заметный оттенок глицинии */
+        rgba(90, 50, 70, 0.04) 0px,
         rgba(90, 50, 70, 0.04) 2px,
         transparent 2px,
-        transparent 60px                 /* Ширина полосок */
+        transparent 60px
     );
     color: #3A2C33;
     min-height: 100vh;
@@ -105,11 +104,15 @@ p {
     margin-bottom: 20px;
 }
 
+/* ОГРАНИЧЕНИЕ РАЗМЕРА ФОТО НА ГЛАВНОЙ */
 .hero-image img {
     width: 100%;
+    max-width: 400px; /* Ограничиваем ширину */
     height: auto;
     border-radius: 4px;
     box-shadow: 8px 8px 0px #E8DFD8;
+    display: block;
+    margin: 0 auto; /* Центрируем, если есть свободное место */
 }
 
 /* Книжная цитата */
@@ -171,9 +174,10 @@ p {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #D6C8C0;
-    border-bottom: 1px solid #D6C8C0;
+    /* Убираем нижнюю границу у статистики, чтобы не было двойной линии с футером */
     padding: 15px 0;
     margin-top: 20px;
+    margin-bottom: 20px; /* Добавляем отступ до футера */
     text-align: center;
 }
 
@@ -196,10 +200,10 @@ p {
     color: #8E7A7F;
 }
 
-/* Сетка работ (Портфолио) */
+/* Сетка работ (Портфолио) 3 В РЯД */
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Ровно 3 колонки */
     gap: 30px;
     margin-top: 20px;
 }
@@ -215,13 +219,12 @@ p {
     aspect-ratio: 2 / 3;
     object-fit: cover;
     border-radius: 2px;
-    /* Сделал тень более выраженной, чтобы карточки "выделялись" на фоне */
     box-shadow: 0 8px 20px rgba(90, 50, 70, 0.1); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work-card:hover img {
-    transform: translateY(-5px); /* Легкий подскок при наведении */
+    transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(90, 50, 70, 0.15);
 }
 
@@ -267,13 +270,17 @@ p {
     align-items: start;
 }
 
+/* ОГРАНИЧЕНИЕ РАЗМЕРА ФОТО НА СТРАНИЦЕ "О СЕБЕ" */
 .about-image img {
     width: 100%;
+    max-width: 400px; /* Ограничиваем ширину */
     height: auto;
     border-radius: 4px;
     box-shadow: 10px 10px 0px #E8DFD8;
     position: sticky;
     top: 20px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Контакты */
@@ -289,7 +296,6 @@ p {
     border-bottom: 1px solid #EBE3DE;
 }
 
-/* УБИРАЕМ ЛИШНЮЮ ЛИНИЮ: если это последняя строка, убираем у нее нижнюю границу */
 .contact-row:last-child {
     border-bottom: none;
 }
@@ -323,7 +329,13 @@ p {
     border-top: 1px solid #EBE3DE;
 }
 
-/* Адаптивность */
+/* Адаптивность (для средних и маленьких экранов) */
+@media (max-width: 900px) {
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr); /* На планшетах 2 колонки */
+    }
+}
+
 @media (max-width: 768px) {
     .hero-section, .about-grid {
         grid-template-columns: 1fr;
@@ -342,5 +354,8 @@ p {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .works-grid {
+        grid-template-columns: 1fr; /* На телефонах 1 колонка */
     }
 }
