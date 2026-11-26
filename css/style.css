@@ -261,16 +261,19 @@ p {
 /* Страница "О себе" (две колонки) */
 .about-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1fr; /* Делаем колонки равными (50/50) */
+    gap: 50px; /* Чуть больше отступа между текстом и фото */
     margin-top: 30px;
+    align-items: start; /* Выравниваем по верхнему краю */
 }
 
 .about-image img {
     width: 100%;
     height: auto;
     border-radius: 4px;
-    box-shadow: 8px 8px 0px #E8DFD8;
+    box-shadow: 12px 12px 0px #E8DFD8; /* Увеличили тень для стиля */
+    position: sticky; /* Фото будет "прилипать" при скролле, если текста много */
+    top: 20px;
 }
 
 /* Контакты (открытая верстка) */
@@ -307,7 +310,7 @@ p {
 
 /* Футер */
 .footer {
-    margin-top: 80px;
+    margin-top: 40px; /* Уменьшили отступ (было 80px) */
     padding-top: 20px;
     text-align: center;
     font-size: 13px;
