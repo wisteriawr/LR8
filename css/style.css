@@ -314,26 +314,40 @@ p {
     border-color: #8E7A7F;
 }
 
+
 /* Страница "О себе" */
-.about-grid {
+.about-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Растягиваем контейнер на всю доступную высоту */
+}
+
+.about-content-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 15px;
-    align-items: start;
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    gap: 40px;
+    flex-grow: 1; /* Позволяет этому блоку занимать всё оставшееся место до футера */
+    margin-top: 20px;
+}
+
+.about-text {
+    /* Текст занимает свою колонку */
+}
+
+.about-image {
+    /* Фото занимает свою колонку */
+    height: 100%; /* Растягиваем контейнер с фото на всю высоту */
 }
 
 .about-image img {
     width: 100%;
-    max-width: 400px;
-    height: auto;
+    height: 100%; /* Фото растягивается на всю высоту контейнера */
+    object-fit: cover; /* Заполняет контейнер, не искажая пропорции (может обрезать края) */
     border-radius: 4px;
     box-shadow: 10px 10px 0px #E8DFD8;
-    position: sticky;
-    top: 20px;
     display: block;
-    margin: 0 auto;
 }
+
 /* Контакты */
 .contacts-open {
     margin-top: 40px; /* Увеличили отступ сверху, чтобы отодвинуть от заголовка */
