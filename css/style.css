@@ -8,7 +8,6 @@
 
 body {
     font-family: 'Jost', sans-serif;
-    /* Тёплый фон цвета слоновой кости */
     background-color: #FAF8F5;
     background-image: repeating-linear-gradient(
         90deg,
@@ -16,12 +15,12 @@ body {
         rgba(90, 50, 70, 0.02) 1px,
         transparent 1px,
         transparent 100px
-    ); /* Едва заметная вертикальная линия, как на листе бумаги */
-    color: #3A2C33; /* Глубокий графитовый с бордовым оттенком */
+    );
+    color: #3A2C33;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 .card {
@@ -32,15 +31,15 @@ body {
 
 /* Меню */
 nav {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-bottom: 1px solid #D6C8C0;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 30px;
 }
 
 nav ul li a {
@@ -54,17 +53,16 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #5A3246; /* Сливовый цвет (глициния) */
+    color: #5A3246;
 }
 
 /* Заголовки */
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 56px;
+    font-size: 52px;
     color: #2D1F25;
-    margin-top: 0;
-    margin-bottom: 5px;
-    letter-spacing: -1px; /* Плотнее */
+    margin-bottom: 15px;
+    letter-spacing: -1px;
     line-height: 1.1;
 }
 
@@ -74,25 +72,25 @@ h1 {
 
 .subtitle {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
+    font-size: 22px;
     font-style: italic;
     color: #7A5C68;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
+    font-size: 28px;
     color: #2D1F25;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     border-bottom: 1px solid #EBE3DE;
     padding-bottom: 5px;
 }
 
 p {
     font-size: 17px;
-    line-height: 1.7;
+    line-height: 1.6;
     color: #4A3B42;
     margin-bottom: 15px;
 }
@@ -101,22 +99,22 @@ p {
 .hero-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 30px;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .hero-image img {
     width: 100%;
     height: auto;
     border-radius: 4px;
-    box-shadow: 10px 10px 0px #E8DFD8; /* Смелая тень, как у печатного альбома */
+    box-shadow: 8px 8px 0px #E8DFD8;
 }
 
 /* Книжная цитата */
 .book-quote {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.4;
     color: #5A3246;
     margin: 15px 0;
@@ -128,10 +126,10 @@ p {
 .book-quote::before {
     content: '“';
     font-family: 'Cormorant Garamond', serif;
-    font-size: 80px;
+    font-size: 70px;
     position: absolute;
-    left: -20px;
-    top: -30px;
+    left: -15px;
+    top: -25px;
     color: #D6C8C0;
     opacity: 0.5;
 }
@@ -139,16 +137,14 @@ p {
 /* Кнопка (Контурная) */
 .btn-outline {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 10px 20px;
     border: 1px solid #5A3246;
     color: #5A3246;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
 .btn-outline:hover {
@@ -166,17 +162,17 @@ p {
 }
 
 .btn-container-left {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
-/* Статистика (открытая верстка, без карточек) */
+/* Статистика */
 .stats-divider {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #D6C8C0;
     border-bottom: 1px solid #D6C8C0;
-    padding: 20px 0;
-    margin-top: 30px;
+    padding: 15px 0;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -187,13 +183,13 @@ p {
 
 .stat-number {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 600;
     color: #5A3246;
 }
 
 .stat-label {
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #8E7A7F;
@@ -202,9 +198,9 @@ p {
 /* Сетка работ (Портфолио) */
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 40px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
 }
 
 .work-card {
@@ -215,10 +211,10 @@ p {
 
 .work-card img {
     width: 100%;
-    aspect-ratio: 2 / 3; /* Пропорции вертикальной книги */
-    object-fit: cover; /* Заполняет, не искажая */
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
     border-radius: 2px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
 }
 
@@ -227,24 +223,24 @@ p {
 }
 
 .work-info {
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .work-info h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
+    font-size: 22px;
     color: #2D1F25;
     margin-bottom: 5px;
 }
 
 .work-info p {
-    font-size: 15px;
+    font-size: 14px;
     color: #7A5C68;
     margin-bottom: 10px;
 }
 
 .work-link {
-    font-size: 14px;
+    font-size: 13px;
     color: #5A3246;
     text-decoration: none;
     text-transform: uppercase;
@@ -259,40 +255,40 @@ p {
     border-color: #8E7A7F;
 }
 
-/* Страница "О себе" (две колонки) */
+/* Страница "О себе" */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Делаем колонки равными (50/50) */
-    gap: 50px; /* Чуть больше отступа между текстом и фото */
-    margin-top: 20px;
-    align-items: start; /* Выравниваем по верхнему краю */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 15px;
+    align-items: start;
 }
 
 .about-image img {
     width: 100%;
     height: auto;
     border-radius: 4px;
-    box-shadow: 12px 12px 0px #E8DFD8; /* Увеличили тень для стиля */
-    position: sticky; /* Фото будет "прилипать" при скролле, если текста много */
+    box-shadow: 10px 10px 0px #E8DFD8;
+    position: sticky;
     top: 20px;
 }
 
-/* Контакты (открытая верстка) */
+/* Контакты */
 .contacts-open {
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .contact-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #EBE3DE;
 }
 
 .contact-platform {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     color: #2D1F25;
 }
@@ -300,7 +296,7 @@ p {
 .contact-row a {
     color: #5A3246;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px;
     transition: color 0.3s;
 }
 
@@ -311,31 +307,31 @@ p {
 
 /* Футер */
 .footer {
-    margin-top: 20px; /* Уменьшили отступ (было 80px) */
-    padding-top: 20px;
+    margin-top: 20px;
+    padding-top: 15px;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     color: #A6959B;
     border-top: 1px solid #EBE3DE;
 }
 
-/* Адаптивность для мобильных */
+/* Адаптивность */
 @media (max-width: 768px) {
     .hero-section, .about-grid {
-        grid-template-columns: 1fr; /* В одну колонку на телефонах */
+        grid-template-columns: 1fr;
     }
     h1 {
-        font-size: 40px;
+        font-size: 38px;
     }
     .stats-divider {
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 15px;
     }
     .stat-open {
         width: 45%;
     }
     nav ul {
-        gap: 20px;
+        gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
     }
