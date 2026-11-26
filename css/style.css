@@ -8,11 +8,11 @@
 
 body {
     font-family: 'Jost', sans-serif;
-    color: #2c2224; /* Более тёмный и серьёзный цвет текста */
-    background-color: #faf7f8; /* Очень светлый, почти белый фон */
+    color: #2c2224;
+    background-color: #faf7f8;
     background-image: repeating-linear-gradient(
         90deg,
-        rgba(209, 122, 143, 0.05), /* Еле заметные полоски */
+        rgba(209, 122, 143, 0.05),
         rgba(209, 122, 143, 0.05) 40px,
         transparent 40px,
         transparent 80px
@@ -27,10 +27,10 @@ body {
 .card {
     max-width: 900px;
     width: 100%;
-    background: #ffffff; /* Чистый белый, без прозрачности */
-    border-radius: 12px; /* Меньше скруглений для строгости */
+    background: #ffffff;
+    border-radius: 12px;
     padding: 50px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Более естественная тень */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border: 1px solid #eaeaea;
 }
 
@@ -54,13 +54,13 @@ nav ul li a {
     text-decoration: none;
     font-weight: 400;
     font-size: 15px;
-    text-transform: uppercase; /* Заглавные буквы для меню добавляют строгости */
+    text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #9b3b55; /* Винно-красный при наведении */
+    color: #9b3b55;
 }
 
 h1 {
@@ -77,7 +77,7 @@ h1 {
     font-size: 18px;
     color: #666;
     margin-bottom: 40px;
-    font-family: 'Jost', sans-serif; /* Убрал рукописный шрифт для серьёзности */
+    font-family: 'Jost', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -89,10 +89,10 @@ p {
     margin-bottom: 20px;
 }
 
-/* Строгая цитата (вместо огромного розового блока) */
+
 .highlight-pink {
-    background-color: #fcf8f9; /* Почти белый с розовым оттенком */
-    border-left: 4px solid #b25c72; /* Строгая темно-розовая полоса */
+    background-color: #fcf8f9;
+    border-left: 4px solid #b25c72;
     padding: 20px 30px;
     margin: 30px 0;
     font-style: italic;
@@ -100,7 +100,7 @@ p {
     color: #333;
 }
 
-/* Сетка статистики */
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -111,7 +111,7 @@ p {
 .stat-item {
     background: #fafafa;
     padding: 20px;
-    border-radius: 8px; /* Острые углы */
+    border-radius: 8px;
     text-align: center;
     border: 1px solid #eee;
 }
@@ -131,17 +131,17 @@ p {
     margin-top: 5px;
 }
 
-/* Сетка для карточек работ */
+
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Карточки чуть шире */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
 
 .work-card {
     background: #fff;
-    border-radius: 6px; /* Минимальное скругление */
+    border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -157,7 +157,7 @@ p {
 
 .work-card img {
     width: 100%;
-    height: 380px; /* Фиксированная высота, чтобы все карточки были ровными */
+    height: 380px;
     object-fit: cover;
 }
 
@@ -231,7 +231,7 @@ p {
 /* Кнопка */
 .btn {
     display: inline-block;
-    background: #1a1113; /* Темная, почти черная кнопка для контраста */
+    background: #1a1113;
     color: white;
     padding: 15px 40px;
     text-decoration: none;
@@ -245,7 +245,7 @@ p {
 }
 
 .btn:hover {
-    background: #9b3b55; /* При наведении становится винно-красной */
+    background: #9b3b55;
 }
 
 .btn-container {
