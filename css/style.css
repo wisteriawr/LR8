@@ -315,37 +315,32 @@ p {
 }
 
 /* Страница "О себе" */
-.about-flex {
-    display: flex;
-    gap: 40px; /* Расстояние между текстом и фото */
+.about-wrapper {
     margin-top: 20px;
-    align-items: flex-start; /* Выравниваем по верхнему краю */
+    /* Очистка, чтобы следующие блоки не наезжали на фото */
+    overflow: hidden; 
 }
 
-.about-text {
-    flex: 1; /* Текст занимает все доступное место */
-    /* Убираем лишние отступы снизу у последнего параграфа, чтобы текст не выпирал */
+.about-image-float {
+    float: left; /* Обтекание слева (текст справа) */
+    width: 40%; /* Ширина фото (можно изменить на 35% или 45%) */
+    margin-right: 30px; /* Отступ от фото до текста */
+    margin-bottom: 20px; /* Отступ снизу */
+    
+    /* Красивая тень для фото */
+    box-shadow: 10px 10px 0px #E8DFD8; 
 }
 
-.about-text p:last-child {
-    margin-bottom: 0;
-}
-
-.about-image {
-    flex: 0 0 45%; /* Фото фиксированной ширины (45% от контейнера) */
-    position: sticky;
-    top: 20px;
-}
-
-.about-image img {
+.about-image-float img {
     width: 100%;
-    height: auto;
+    height: auto; /* Квадратное фото само подстроится */
     border-radius: 4px;
-    /* Сделал тень более благородной и объемной, без резких линий */
-    box-shadow: 0 10px 30px rgba(90, 50, 70, 0.15); 
     display: block;
 }
 
+.clear {
+    clear: both; /* Запрещает тексту обтекать фото дальше */
+}
 /* Контакты */
 .contacts-open {
     margin-top: 40px; /* Увеличили отступ сверху, чтобы отодвинуть от заголовка */
