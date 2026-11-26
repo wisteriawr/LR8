@@ -315,24 +315,34 @@ p {
 }
 
 /* Страница "О себе" */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Две равные колонки */
-    gap: 40px; /* Отступ между текстом и фото */
+.about-flex {
+    display: flex;
+    gap: 40px; /* Расстояние между текстом и фото */
     margin-top: 20px;
-    align-items: start; /* Важно: выравниваем по верхнему краю */
+    align-items: flex-start; /* Выравниваем по верхнему краю */
+}
+
+.about-text {
+    flex: 1; /* Текст занимает все доступное место */
+    /* Убираем лишние отступы снизу у последнего параграфа, чтобы текст не выпирал */
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
 }
 
 .about-image {
-    position: sticky; /* Фото будет "прилипать" при прокрутке, если текст длинный */
+    flex: 0 0 45%; /* Фото фиксированной ширины (45% от контейнера) */
+    position: sticky;
     top: 20px;
 }
 
 .about-image img {
     width: 100%;
-    height: auto; /* Высота подстраивается под ширину, сохраняя пропорции */
+    height: auto;
     border-radius: 4px;
-    box-shadow: 12px 12px 0px #E8DFD8; /* Тень в стиле журнала */
+    /* Сделал тень более благородной и объемной, без резких линий */
+    box-shadow: 0 10px 30px rgba(90, 50, 70, 0.15); 
     display: block;
 }
 
