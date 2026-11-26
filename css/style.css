@@ -314,37 +314,25 @@ p {
     border-color: #8E7A7F;
 }
 
-
 /* Страница "О себе" */
-.about-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Растягиваем контейнер на всю доступную высоту */
-}
-
-.about-content-wrapper {
+.about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Две колонки */
-    gap: 40px;
-    flex-grow: 1; /* Позволяет этому блоку занимать всё оставшееся место до футера */
+    grid-template-columns: 1fr 1fr; /* Две равные колонки */
+    gap: 40px; /* Отступ между текстом и фото */
     margin-top: 20px;
-}
-
-.about-text {
-    /* Текст занимает свою колонку */
+    align-items: start; /* Важно: выравниваем по верхнему краю */
 }
 
 .about-image {
-    /* Фото занимает свою колонку */
-    height: 100%; /* Растягиваем контейнер с фото на всю высоту */
+    position: sticky; /* Фото будет "прилипать" при прокрутке, если текст длинный */
+    top: 20px;
 }
 
 .about-image img {
     width: 100%;
-    height: 100%; /* Фото растягивается на всю высоту контейнера */
-    object-fit: cover; /* Заполняет контейнер, не искажая пропорции (может обрезать края) */
+    height: auto; /* Высота подстраивается под ширину, сохраняя пропорции */
     border-radius: 4px;
-    box-shadow: 10px 10px 0px #E8DFD8;
+    box-shadow: 12px 12px 0px #E8DFD8; /* Тень в стиле журнала */
     display: block;
 }
 
