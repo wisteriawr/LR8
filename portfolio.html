@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Портфолио | Рахманина Лина - веб-разработка и SEO</title>
-    <meta name="description" content="Портфолио Рахманиной Лины: навыки HTML, CSS, Git, настройка хостинга и SEO-оптимизация. Мои учебные проекты.">
+    <title>Мои работы | Лина Рахманина</title>
+    <meta name="description" content="Портфолио работ Лины Рахманиной. Конкурсные работы, макси, работы в соавторстве. Фандомы: к-поп, Гарри Поттер, Уэнсдей, Формула-1.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,37 +11,51 @@
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="portfolio.html">Мои работы</a></li>
                 <li><a href="about.html">О себе</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
 
-        <h1>Рахманина Лина</h1>
-        <p class="subtitle">ИТКР-225 | 18 лет, г. Москва | Веб-технологии</p>
-        
-        <div class="profile-photo">
-            <img src="images/photo.jpg" alt="Фотография Рахманиной Лины">
-        </div>
-        
-        <div class="skills">
-            <h2>Навыки</h2>
-            <ul>
-                <li>HTML5 & CSS3</li>
-                <li>Основы DNS и настройка хостинга</li>
-                <li>Git и GitHub</li>
-                <li>Работа с командной строкой</li>
-            </ul>
-        </div>
+        <h1>Мои работы</h1>
+        <p class="subtitle">Избранные проекты и публикации</p>
 
-        <h2>Мои проекты</h2>
-        <h3>Лабораторная работа №7</h3>
-        <p>Публикация сайта на GitHub Pages и настройка домена.</p>
-        <h3>Лабораторная работа №8</h3>
-        <p>Создание SEO-оптимизированного сайта и настройка robots.txt.</p>
+        <div class="works-grid">
+            <!-- Работа 1 -->
+            <div class="work-card">
+                <img src="images/razgaday.jpg" alt="Обложка работы Разгадай меня">
+                <h3>Разгадай меня</h3>
+                <p>Конкурсная работа по популярному сериалу. История о любви и тайнах.</p>
+                <a href="https://litnet.com/ru/lina-romanova-u13504049" target="_blank" class="work-link">Читать на Литнет</a>
+            </div>
+
+            <!-- Работа 2 -->
+            <div class="work-card">
+                <img src="images/dirty.jpg" alt="Обложка работы Dirty Chords">
+                <h3>Dirty Chords</h3>
+                <p>Работа в соавторстве (Вистерия & amixlika). Атмосфера Коачеллы, музыки и Лос-Анджелеса.</p>
+                <a href="https://ficbook.net/authors/6285678" target="_blank" class="work-link">Читать на Фикбуке</a>
+            </div>
+
+            <!-- Работа 3 -->
+            <div class="work-card">
+                <img src="images/manhattan.jpg" alt="Обложка работы Манхэттен на вкус">
+                <h3>Манхэттен на вкус</h3>
+                <p>Макси. История о студентке, Нью-Йорке и неожиданных поворотах судьбы.</p>
+                <a href="https://ficbook.net/authors/6285678" target="_blank" class="work-link">Читать на Фикбуке</a>
+            </div>
+
+            <!-- Работа 4 -->
+            <div class="work-card">
+                <img src="images/epilog.jpg" alt="Обложка работы Фальшивый эпилог">
+                <h3>Фальшивый эпилог</h3>
+                <p>Макси. Романтика и драма о книжном туре, мечтах и любви.</p>
+                <a href="https://ficbook.net/authors/6285678" target="_blank" class="work-link">Читать на Фикбуке</a>
+            </div>
+        </div>
 
         <footer class="footer">
-            <p>&copy; <span id="current-year"></span> Рахманина Л.В. Все права защищены.</p>
+            <p>&copy; <span id="current-year"></span> Лина Рахманина. Все права защищены.</p>
         </footer>
     </div>
     <script src="js/script.js"></script>
