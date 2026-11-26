@@ -334,18 +334,17 @@ p {
     display: block;
     margin: 0 auto;
 }
-
 /* Контакты */
 .contacts-open {
-    margin-top: 30px; /* Чуть больше отступа сверху */
+    margin-top: 40px; /* Увеличили отступ сверху, чтобы отодвинуть от заголовка */
 }
 
 .contact-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 0; /* Увеличили отступы, чтобы строка дышала */
-    border-bottom: 1px solid #EBE3DE;
+    align-items: flex-start; /* Выравниваем по верхнему краю, чтобы ссылка не съезжала */
+    padding: 25px 0; /* Увеличили отступы, чтобы строки "дышали" */
+    border-bottom: 1px dashed #D6C8C0; /* Сделали линию пунктирной для легкости */
 }
 
 .contact-row:last-child {
@@ -355,28 +354,33 @@ p {
 .contact-info {
     display: flex;
     flex-direction: column; /* Выстраиваем название и описание друг под другом */
-    gap: 5px; /* Расстояние между ними */
+    gap: 8px; /* Расстояние между названием и описанием */
+    max-width: 60%; /* Ограничиваем ширину, чтобы текст не растягивался на всю строку */
 }
 
 .contact-platform {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
+    font-size: 26px; /* Чуть увеличили */
     font-weight: 600;
     color: #2D1F25;
+    line-height: 1;
 }
 
 .contact-desc {
-    font-size: 14px;
+    font-size: 15px;
     color: #7A5C68;
     font-style: italic;
+    line-height: 1.4;
 }
 
 .contact-row a {
     color: #5A3246;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 500;
     transition: color 0.3s;
-    border-bottom: 1px solid transparent; /* Подготовка к ховеру */
+    border-bottom: 1px solid #5A3246; /* Сделали ссылку заметнее */
+    padding-bottom: 2px;
 }
 
 .contact-row a:hover {
