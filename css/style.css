@@ -91,13 +91,16 @@ p {
 
 
 .highlight-pink {
-    background-color: #fcf8f9;
-    border-left: 4px solid #b25c72;
-    padding: 20px 30px;
-    margin: 30px 0;
+    background-color: #fcf8f9; 
+    border-left: 4px solid #b25c72; 
+    padding: 15px 25px; /* Уменьшили внутренние отступы (было 20px 30px) */
+    margin: 20px auto; /* auto по бокам центрирует блок */
+    max-width: 600px; /* Ограничили ширину, чтобы текст не расползался */
     font-style: italic;
-    font-size: 18px;
+    font-size: 17px; /* Чуть уменьшили шрифт */
     color: #333;
+    line-height: 1.5; /* Уменьшили межстрочный интервал (было 1.8) */
+    border-radius: 4px; /* Легкое скругление, чтобы смотрелось аккуратно */
 }
 
 
