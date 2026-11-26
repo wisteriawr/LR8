@@ -90,13 +90,48 @@ p {
     margin-bottom: 20px;
 }
 
-/* Эффект текстовыделителя */
+/* Эффект текстовыделителя с булавками */
 .highlight-pink {
-    background: linear-gradient(transparent 60%, #ffcce0 60%);
-    display: inline;
-    padding: 0 5px;
+    display: inline-block;
+    position: relative;
+    background: #fbd3e0; /* Нежный розовый фон */
+    padding: 10px 25px; /* Отступы внутри выделения */
+    margin: 15px 0;
     font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #3e2723;
+}
+
+/* Левая булавка */
+.highlight-pink::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: -8px;
+    bottom: -8px;
+    width: 3px;
+    background-color: #ec84a9; /* Яркий розовый цвет булавки */
+    border-radius: 2px;
+}
+
+.highlight-pink::before {
+    /* Круглая шляпка сверху */
+    box-shadow: -1.5px -2px 0 3px #ec84a9; 
+}
+
+/* Правая булавка */
+.highlight-pink::after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: -8px;
+    bottom: -8px;
+    width: 3px;
+    background-color: #ec84a9;
+    border-radius: 2px;
+    /* Круглая шляпка снизу */
+    box-shadow: 1.5px 2px 0 3px #ec84a9; 
 }
 
 .content-block {
